@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Amit Kumar Dev | Full Stack Laravel Developer | 8+ Years Experience</title>
+<meta name="description" content="Senior Full Stack Laravel Developer with 8+ years of experience. Specializing in enterprise government solutions, World Bank projects, and scalable web applications. Based in Kathmandu, Nepal."/>
+<meta name="keywords" content="Laravel Developer Nepal, Full Stack Developer Kathmandu, PHP Developer, Django Developer, Senior Web Developer Nepal"/>
+<meta property="og:title" content="Amit Kumar Dev | Full Stack Laravel Developer"/>
+<meta property="og:description" content="8+ Years building enterprise-grade solutions. Government systems, World Bank projects, international clients."/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --ink: #0D0F14;
+    --ink-soft: #2A2D36;
+    --paper: #F7F8FA;
+    --white: #FFFFFF;
+    --accent: #2563EB;
+    --accent-bright: #3B82F6;
+    --accent-glow: rgba(37,99,235,0.15);
+    --accent-glow-strong: rgba(37,99,235,0.25);
+    --green: #10B981;
+    --amber: #F59E0B;
+    --muted: #6B7280;
+    --border: #E5E7EB;
+    --card: #FFFFFF;
+    --section-alt: #F0F4FF;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;font-size:16px;}
+  body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;line-height:1.6;}
+
+  /* ── NAV ── */
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(247,248,250,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+  .nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:60px;}
+  .nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;color:var(--ink);text-decoration:none;letter-spacing:-0.5px;}
+  .nav-logo span{color:var(--accent);}
+  .nav-links{display:flex;gap:28px;list-style:none;}
+  .nav-links a{font-size:0.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+  .nav-links a:hover{color:var(--accent);}
+  .nav-cta{background:var(--accent);color:#fff;padding:8px 18px;border-radius:6px;font-size:0.82rem;font-weight:600;text-decoration:none;transition:background 0.2s;}
+  .nav-cta:hover{background:#1d4ed8;}
+  .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+  .hamburger span{width:22px;height:2px;background:var(--ink);border-radius:2px;transition:0.3s;}
+
+  /* ── HERO ── */
+  #hero{min-height:100vh;display:flex;align-items:center;padding:80px 24px 60px;background:var(--ink);position:relative;overflow:hidden;}
+  .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(37,99,235,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(37,99,235,0.07) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
+  .hero-glow{position:absolute;top:-20%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(37,99,235,0.2) 0%,transparent 70%);pointer-events:none;}
+  .hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1;width:100%;}
+  .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--accent-glow);border:1px solid rgba(37,99,235,0.3);color:#93C5FD;padding:6px 14px;border-radius:100px;font-size:0.78rem;font-weight:500;letter-spacing:0.5px;margin-bottom:28px;font-family:'JetBrains Mono',monospace;}
+  .hero-eyebrow::before{content:'';width:7px;height:7px;background:#22D3EE;border-radius:50%;animation:pulse 2s infinite;}
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.5;transform:scale(1.3);}}
+  .hero-name{font-family:'Syne',sans-serif;font-size:clamp(2.8rem,7vw,5rem);font-weight:800;color:#FFFFFF;line-height:1.0;letter-spacing:-2px;margin-bottom:12px;}
+  .hero-name .accent-line{color:var(--accent-bright);display:block;}
+  .hero-role{font-size:clamp(1rem,2vw,1.2rem);color:#9CA3AF;font-weight:400;margin-bottom:32px;max-width:600px;line-height:1.7;}
+  .hero-role strong{color:#E5E7EB;font-weight:600;}
+  .hero-stats{display:flex;flex-wrap:wrap;gap:32px;margin-bottom:40px;}
+  .h-stat{text-align:left;}
+  .h-stat-num{font-family:'Syne',sans-serif;font-size:2.2rem;font-weight:800;color:#FFFFFF;line-height:1;}
+  .h-stat-num span{color:var(--accent-bright);}
+  .h-stat-label{font-size:0.78rem;color:#6B7280;letter-spacing:0.5px;margin-top:2px;}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:48px;}
+  .btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;padding:13px 24px;border-radius:8px;font-weight:600;font-size:0.9rem;text-decoration:none;transition:all 0.2s;border:none;cursor:pointer;}
+  .btn-primary:hover{background:#1d4ed8;transform:translateY(-1px);}
+  .btn-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#E5E7EB;padding:13px 24px;border-radius:8px;font-weight:600;font-size:0.9rem;text-decoration:none;border:1px solid rgba(255,255,255,0.2);transition:all 0.2s;cursor:pointer;}
+  .btn-outline:hover{border-color:var(--accent-bright);color:#fff;background:var(--accent-glow);}
+  .hero-tech-stack{display:flex;flex-wrap:wrap;gap:10px;}
+  .tech-pill{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:#9CA3AF;padding:5px 12px;border-radius:100px;font-size:0.75rem;font-family:'JetBrains Mono',monospace;transition:all 0.2s;}
+  .tech-pill:hover{border-color:var(--accent-bright);color:var(--accent-bright);}
+
+  /* ── RECRUITER SNAPSHOT ── */
+  #snapshot{background:var(--accent);padding:60px 24px;}
+  .snap-inner{max-width:1100px;margin:0 auto;}
+  .snap-title{font-family:'Syne',sans-serif;font-size:0.8rem;font-weight:700;color:rgba(255,255,255,0.6);letter-spacing:2px;text-transform:uppercase;margin-bottom:24px;}
+  .snap-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;}
+  .snap-card{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:12px;padding:20px;backdrop-filter:blur(4px);}
+  .snap-icon{font-size:1.4rem;margin-bottom:8px;}
+  .snap-card-title{font-weight:700;color:#fff;font-size:0.95rem;margin-bottom:4px;}
+  .snap-card-sub{font-size:0.82rem;color:rgba(255,255,255,0.75);line-height:1.5;}
+
+  /* ── SECTION DEFAULTS ── */
+  section{padding:80px 24px;}
+  .section-inner{max-width:1100px;margin:0 auto;}
+  .section-eyebrow{font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:var(--accent);font-weight:500;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;}
+  .section-title{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;color:var(--ink);letter-spacing:-1px;line-height:1.1;margin-bottom:16px;}
+  .section-sub{font-size:1rem;color:var(--muted);max-width:580px;line-height:1.7;}
+
+  /* ── WHY HIRE ME ── */
+  #why{background:var(--ink);}
+  #why .section-title{color:#fff;}
+  #why .section-sub{color:#9CA3AF;}
+  #why .section-eyebrow{color:#60A5FA;}
+  .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:48px;}
+  .why-card{background:#1A1D26;border:1px solid #2D3142;border-radius:14px;padding:28px;transition:border-color 0.2s,transform 0.2s;}
+  .why-card:hover{border-color:var(--accent);transform:translateY(-3px);}
+  .why-number{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--accent);opacity:0.4;line-height:1;margin-bottom:12px;}
+  .why-card h3{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:8px;}
+  .why-card p{font-size:0.87rem;color:#9CA3AF;line-height:1.65;}
+  .why-card .tag{display:inline-block;background:var(--accent-glow);border:1px solid rgba(37,99,235,0.3);color:#60A5FA;padding:3px 10px;border-radius:100px;font-size:0.72rem;font-family:'JetBrains Mono',monospace;margin-top:12px;}
+
+  /* ── EXPERIENCE ── */
+  #experience{background:var(--white);}
+  .timeline{margin-top:48px;position:relative;}
+  .timeline::before{content:'';position:absolute;left:18px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--accent),var(--border));border-radius:2px;}
+  .tl-item{padding-left:56px;margin-bottom:40px;position:relative;}
+  .tl-dot{position:absolute;left:8px;top:4px;width:22px;height:22px;background:var(--accent);border-radius:50%;border:3px solid var(--white);box-shadow:0 0 0 3px var(--accent-glow);}
+  .tl-dot.current{background:var(--green);box-shadow:0 0 0 3px rgba(16,185,129,0.2);}
+  .tl-header{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px;}
+  .tl-role{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;color:var(--ink);}
+  .tl-company{font-size:0.88rem;font-weight:600;color:var(--accent);}
+  .tl-period{font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:var(--muted);background:var(--section-alt);padding:4px 10px;border-radius:100px;}
+  .tl-desc{font-size:0.87rem;color:var(--muted);line-height:1.7;margin-bottom:12px;}
+  .tl-achievements{list-style:none;display:flex;flex-direction:column;gap:6px;}
+  .tl-achievements li{font-size:0.85rem;color:var(--ink-soft);padding-left:16px;position:relative;}
+  .tl-achievements li::before{content:'▸';position:absolute;left:0;color:var(--accent);font-size:0.7rem;top:3px;}
+
+  /* ── PROJECTS ── */
+  #projects{background:var(--paper);}
+  .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-top:48px;}
+  .proj-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:28px;transition:all 0.2s;position:relative;overflow:hidden;}
+  .proj-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),#60A5FA);}
+  .proj-card:hover{border-color:var(--accent);box-shadow:0 8px 32px var(--accent-glow);transform:translateY(-2px);}
+  .proj-badge{display:inline-flex;align-items:center;gap:6px;font-size:0.72rem;font-weight:600;padding:4px 10px;border-radius:100px;margin-bottom:14px;font-family:'JetBrains Mono',monospace;}
+  .badge-gov{background:#FEF3C7;color:#92400E;}
+  .badge-intl{background:#EDE9FE;color:#5B21B6;}
+  .badge-social{background:#ECFDF5;color:#065F46;}
+  .badge-sports{background:#FFF1F2;color:#9F1239;}
+  .proj-title{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;color:var(--ink);margin-bottom:8px;}
+  .proj-desc{font-size:0.85rem;color:var(--muted);line-height:1.65;margin-bottom:16px;}
+  .proj-impact{background:var(--section-alt);border-left:3px solid var(--accent);padding:10px 14px;border-radius:0 6px 6px 0;margin-bottom:16px;}
+  .proj-impact-label{font-size:0.7rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:2px;}
+  .proj-impact-text{font-size:0.83rem;color:var(--ink-soft);font-weight:500;}
+  .proj-tags{display:flex;flex-wrap:wrap;gap:6px;}
+  .proj-tag{background:var(--paper);border:1px solid var(--border);color:var(--ink-soft);padding:3px 10px;border-radius:100px;font-size:0.72rem;font-family:'JetBrains Mono',monospace;}
+
+  /* ── SKILLS ── */
+  #skills{background:var(--white);}
+  .skills-layout{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:48px;}
+  .skill-group{margin-bottom:32px;}
+  .skill-group-title{font-family:'Syne',sans-serif;font-size:0.8rem;font-weight:700;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid var(--border);}
+  .skill-bar-item{margin-bottom:14px;}
+  .skill-bar-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;}
+  .skill-name{font-size:0.87rem;font-weight:500;color:var(--ink);}
+  .skill-pct{font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:var(--muted);}
+  .skill-bar-bg{background:var(--border);border-radius:100px;height:6px;overflow:hidden;}
+  .skill-bar-fill{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--accent),var(--accent-bright));transition:width 1.2s cubic-bezier(0.4,0,0.2,1);}
+  .skill-chips{display:flex;flex-wrap:wrap;gap:8px;}
+  .skill-chip{background:var(--paper);border:1px solid var(--border);color:var(--ink-soft);padding:6px 14px;border-radius:8px;font-size:0.82rem;font-weight:500;transition:all 0.2s;}
+  .skill-chip:hover{border-color:var(--accent);color:var(--accent);background:var(--section-alt);}
+
+  /* ── ACHIEVEMENTS ── */
+  #achievements{background:var(--section-alt);}
+  .achieve-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:48px;}
+  .achieve-card{background:var(--white);border-radius:14px;padding:28px;border:1px solid var(--border);text-align:center;transition:all 0.2s;}
+  .achieve-card:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(0,0,0,0.08);}
+  .achieve-icon{font-size:2rem;margin-bottom:12px;}
+  .achieve-num{font-family:'Syne',sans-serif;font-size:2.4rem;font-weight:800;color:var(--accent);line-height:1;margin-bottom:4px;}
+  .achieve-label{font-size:0.85rem;color:var(--muted);line-height:1.4;}
+
+  /* ── CERTIFICATIONS / EDUCATION ── */
+  #certed{background:var(--white);}
+  .certed-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:48px;}
+  .cert-card{background:var(--paper);border:1px solid var(--border);border-radius:14px;padding:24px;display:flex;gap:16px;align-items:flex-start;transition:all 0.2s;}
+  .cert-card:hover{border-color:var(--accent);background:var(--section-alt);}
+  .cert-icon-wrap{width:48px;height:48px;background:var(--accent-glow);border:1px solid rgba(37,99,235,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;}
+  .cert-title{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;color:var(--ink);margin-bottom:4px;}
+  .cert-org{font-size:0.82rem;color:var(--accent);font-weight:600;margin-bottom:4px;}
+  .cert-note{font-size:0.8rem;color:var(--muted);}
+
+  /* ── CONTACT ── */
+  #contact{background:var(--ink);padding:80px 24px;}
+  #contact .section-title{color:#fff;}
+  #contact .section-sub{color:#9CA3AF;}
+  #contact .section-eyebrow{color:#60A5FA;}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:48px;align-items:start;}
+  .contact-tagline{font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:700;color:#fff;line-height:1.4;margin-bottom:24px;}
+  .contact-tagline em{color:var(--accent-bright);font-style:normal;}
+  .contact-note{font-size:0.88rem;color:#9CA3AF;line-height:1.7;margin-bottom:32px;}
+  .contact-buttons{display:flex;flex-direction:column;gap:12px;}
+  .contact-btn{display:flex;align-items:center;gap:14px;padding:14px 20px;border-radius:10px;text-decoration:none;font-weight:500;font-size:0.9rem;transition:all 0.2s;border:1px solid transparent;}
+  .contact-btn-email{background:#1A1D26;border-color:#2D3142;color:#E5E7EB;}
+  .contact-btn-email:hover{border-color:var(--accent-bright);background:var(--accent-glow);}
+  .contact-btn-whatsapp{background:#1A1D26;border-color:#2D3142;color:#E5E7EB;}
+  .contact-btn-whatsapp:hover{border-color:#25D366;background:rgba(37,211,102,0.08);}
+  .contact-btn-call{background:#1A1D26;border-color:#2D3142;color:#E5E7EB;}
+  .contact-btn-call:hover{border-color:var(--amber);background:rgba(245,158,11,0.08);}
+  .contact-btn-linkedin{background:#1A1D26;border-color:#2D3142;color:#E5E7EB;}
+  .contact-btn-linkedin:hover{border-color:#0077B5;background:rgba(0,119,181,0.08);}
+  .contact-btn-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
+  .icon-email{background:rgba(37,99,235,0.2);}
+  .icon-wa{background:rgba(37,211,102,0.2);}
+  .icon-phone{background:rgba(245,158,11,0.2);}
+  .icon-li{background:rgba(0,119,181,0.2);}
+  .contact-btn-text{flex:1;}
+  .contact-btn-label{font-size:0.75rem;color:var(--muted);display:block;}
+  .contact-btn-value{font-size:0.9rem;color:inherit;font-weight:500;}
+  .dl-section{background:#1A1D26;border:1px solid #2D3142;border-radius:14px;padding:28px;}
+  .dl-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:#fff;margin-bottom:8px;}
+  .dl-sub{font-size:0.83rem;color:#9CA3AF;margin-bottom:20px;}
+  .dl-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:#fff;padding:13px 20px;border-radius:8px;font-weight:600;font-size:0.9rem;text-decoration:none;transition:all 0.2s;}
+  .dl-btn:hover{background:#1d4ed8;}
+
+  /* ── FOOTER ── */
+  footer{background:#09090B;padding:28px 24px;text-align:center;}
+  footer p{font-size:0.8rem;color:#4B5563;}
+  footer a{color:#6B7280;text-decoration:none;}
+
+  /* ── MOBILE NAV ── */
+  @media(max-width:768px){
+    .nav-links{display:none;position:absolute;top:60px;left:0;right:0;background:var(--white);padding:20px;flex-direction:column;gap:16px;border-bottom:1px solid var(--border);box-shadow:0 8px 24px rgba(0,0,0,0.08);}
+    .nav-links.open{display:flex;}
+    .nav-cta{display:none;}
+    .hamburger{display:flex;}
+    .skills-layout{grid-template-columns:1fr;}
+    .certed-grid{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:1fr;}
+    .hero-stats{gap:20px;}
+    .h-stat-num{font-size:1.8rem;}
+  }
+  @media(max-width:480px){
+    .projects-grid{grid-template-columns:1fr;}
+    .why-grid{grid-template-columns:1fr;}
+  }
+
+  /* ── SCROLL REVEAL ── */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease;}
+  .reveal.visible{opacity:1;transform:none;}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">Amit<span>.</span>dev</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#why">Why Me</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="mailto:amitdev67@gmail.com" class="nav-cta">Hire Me →</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Available for New Opportunities · Kathmandu, Nepal</div>
+    <h1 class="hero-name">Amit Kumar Dev<span class="accent-line">Full Stack Laravel Dev</span></h1>
+    <p class="hero-role">Building <strong>enterprise-grade systems</strong> that governments, international development agencies, and global businesses trust. From Nepal Telecom to World Bank–funded projects — <strong>8+ years</strong> of turning complex requirements into clean, scalable code.</p>
+    <div class="hero-stats">
+      <div class="h-stat"><div class="h-stat-num">8<span>+</span></div><div class="h-stat-label">Years Experience</div></div>
+      <div class="h-stat"><div class="h-stat-num">20<span>+</span></div><div class="h-stat-label">Projects Delivered</div></div>
+      <div class="h-stat"><div class="h-stat-num">0</div><div class="h-stat-label">Downtime on Gov Systems</div></div>
+      <div class="h-stat"><div class="h-stat-num">3<span>+</span></div><div class="h-stat-label">International Clients</div></div>
+    </div>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Get In Touch
+      </a>
+      <a href="#projects" class="btn-outline">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        View Projects
+      </a>
+      <a href="https://www.linkedin.com/in/amitkumardev/" target="_blank" rel="noopener" class="btn-outline">LinkedIn</a>
+    </div>
+    <div class="hero-tech-stack">
+      <span class="tech-pill">Laravel</span>
+      <span class="tech-pill">PHP</span>
+      <span class="tech-pill">Python / Django</span>
+      <span class="tech-pill">Vue.js</span>
+      <span class="tech-pill">React.js</span>
+      <span class="tech-pill">MySQL</span>
+      <span class="tech-pill">PostgreSQL</span>
+      <span class="tech-pill">Linux / Ubuntu</span>
+      <span class="tech-pill">Power BI</span>
+      <span class="tech-pill">Odoo</span>
+    </div>
+  </div>
+</section>
+
+<!-- RECRUITER SNAPSHOT -->
+<section id="snapshot">
+  <div class="snap-inner">
+    <div class="snap-title">⚡ Recruiter Snapshot — The 30-Second Version</div>
+    <div class="snap-grid">
+      <div class="snap-card"><div class="snap-icon">🏛️</div><div class="snap-card-title">Government-Scale Experience</div><div class="snap-card-sub">Delivered Nepal Telecom's national recruitment system processing thousands of applications — zero downtime.</div></div>
+      <div class="snap-card"><div class="snap-icon">🌍</div><div class="snap-card-title">International Project Lead</div><div class="snap-card-sub">Currently leading technical development for a World Bank–funded agricultural project in coordination with international stakeholders.</div></div>
+      <div class="snap-card"><div class="snap-icon">💰</div><div class="snap-card-title">Payment Systems Expert</div><div class="snap-card-sub">Designed integrated tax & payment platforms with Nepal's major Payment Service Providers — secure, reconciled, production-grade.</div></div>
+      <div class="snap-card"><div class="snap-icon">🌐</div><div class="snap-card-title">Remote-Ready Professional</div><div class="snap-card-sub">Currently delivering across international time zones for Australian clients alongside Nepal-based enterprise work.</div></div>
+      <div class="snap-card"><div class="snap-icon">👨‍💼</div><div class="snap-card-title">Leader & Mentor</div><div class="snap-card-sub">Led cross-functional teams, established coding standards, and mentored junior developers at Shangrila Microsystem for 7 years.</div></div>
+      <div class="snap-card"><div class="snap-icon">🏆</div><div class="snap-card-title">Recognised Excellence</div><div class="snap-card-sub">Received Letter of Appreciation from Nepal Telecom for outstanding performance and exceptional project management.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY HIRE ME -->
+<section id="why">
+  <div class="section-inner">
+    <div class="section-eyebrow">Why Hire Amit</div>
+    <h2 class="section-title">Built for the Hard Projects.</h2>
+    <p class="section-sub">Most developers can ship features. Few can architect systems that serve thousands of users, integrate national payment networks, and meet international development standards. Here's what sets me apart.</p>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-number">01</div>
+        <h3>Enterprise Track Record</h3>
+        <p>I've built national-scale systems for Nepal Telecom, online tax platforms for government agencies, and World Bank–funded digital tools. This isn't portfolio work — these systems run in production, at scale, right now.</p>
+        <span class="tag">Government / Enterprise</span>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-number">02</div>
+        <h3>Laravel at Senior Depth</h3>
+        <p>7+ years of Laravel-first development — not as a framework user, but as an architect. Service containers, queue systems, complex Eloquent relationships, multi-tenancy, payment gateway integration. I know where the edges are.</p>
+        <span class="tag">Laravel Expert</span>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-number">03</div>
+        <h3>Full Spectrum Developer</h3>
+        <p>Backend Laravel/Django, frontend Vue.js/React, DevOps on Linux Ubuntu, analytics with Power BI, Odoo ERP customisation. You won't need five people for what I can architect and deliver end-to-end.</p>
+        <span class="tag">Full Stack + DevOps</span>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-number">04</div>
+        <h3>International Work Standard</h3>
+        <p>Currently consulting on a World Bank project with international deliverable milestones. I'm used to documentation standards, stakeholder reporting, and delivery commitments that go beyond typical agency work.</p>
+        <span class="tag">World Bank Project</span>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-number">05</div>
+        <h3>Payment & Fintech Integration</h3>
+        <p>Hands-on with Nepal's Payment Service Providers, automated reconciliation systems, and secure transaction handling. Built the TaxPayer system managing multi-revenue stream collection at a national level.</p>
+        <span class="tag">Fintech / Payments</span>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-number">06</div>
+        <h3>Zero-Drama Delivery</h3>
+        <p>The VAARS system for Nepal Telecom processed thousands of applications with zero downtime. I build with reliability first — proper testing, clean git workflows, deployment pipelines, and production-hardened code.</p>
+        <span class="tag">Zero Downtime Record</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-inner">
+    <div class="section-eyebrow">Career Journey</div>
+    <h2 class="section-title">8 Years of Progressive Impact</h2>
+    <p class="section-sub">From junior developer to international consultant — a consistent track record of taking on harder problems and leading bigger teams.</p>
+    <div class="timeline">
+
+      <div class="tl-item reveal">
+        <div class="tl-dot current"></div>
+        <div class="tl-header">
+          <div>
+            <div class="tl-role">Laravel Consultant</div>
+            <div class="tl-company">Dryice Solutions Pvt. Ltd.</div>
+          </div>
+          <span class="tl-period">Jan 2025 – Present</span>
+        </div>
+        <p class="tl-desc">Technical lead for a World Bank–funded agricultural cluster development project (FANSEP 2), coordinating with international stakeholders to deliver field-level digital solutions across Nepal.</p>
+        <ul class="tl-achievements">
+          <li>Leading farmer cluster management system and value chain enhancement platforms</li>
+          <li>Implementing climate-resilient farming practice tracking tools</li>
+          <li>Ensuring delivery standards meet World Bank international development requirements</li>
+          <li>Building market access solutions for agricultural communities</li>
+        </ul>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot current"></div>
+        <div class="tl-header">
+          <div>
+            <div class="tl-role">Lead Developer</div>
+            <div class="tl-company">AoneTech Solutions</div>
+          </div>
+          <span class="tl-period">2024 – Present</span>
+        </div>
+        <p class="tl-desc">Directing development initiatives for enterprise clients, leading cross-functional teams in agile environments.</p>
+        <ul class="tl-achievements">
+          <li>Directing enterprise client development initiatives end-to-end</li>
+          <li>Leading cross-functional agile development teams</li>
+        </ul>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot current"></div>
+        <div class="tl-header">
+          <div>
+            <div class="tl-role">Senior Developer</div>
+            <div class="tl-company">Empire IT</div>
+          </div>
+          <span class="tl-period">2024 – Present</span>
+        </div>
+        <p class="tl-desc">Architecting comprehensive systems for diverse client verticals including real estate and sports technology.</p>
+        <ul class="tl-achievements">
+          <li>Architected comprehensive real estate agent management system</li>
+          <li>Developed and deployed Sudurpaschim Royals official website</li>
+        </ul>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-header">
+          <div>
+            <div class="tl-role">Senior Full Stack Developer</div>
+            <div class="tl-company">Shangrila Microsystem</div>
+          </div>
+          <span class="tl-period">2017 – 2024 · 7 years</span>
+        </div>
+        <p class="tl-desc">Core 7-year tenure building enterprise-grade Laravel applications, leading teams, and delivering government-scale systems. The foundation of my expertise.</p>
+        <ul class="tl-achievements">
+          <li>Led development of VAARS for Nepal Telecom — processed thousands of applications at zero downtime</li>
+          <li>Built TaxPayer platform integrating Nepal's major Payment Service Providers</li>
+          <li>Mentored junior developers and established organisation-wide coding standards</li>
+          <li>Managed Git workflows across GitLab and Bitbucket in Linux (Ubuntu) environments</li>
+          <li>Concurrently provided remote Laravel/Django services for Australian-based clients</li>
+        </ul>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-header">
+          <div>
+            <div class="tl-role">Laravel Developer</div>
+            <div class="tl-company">Sasto Deal</div>
+          </div>
+          <span class="tl-period">2023 – 2024</span>
+        </div>
+        <p class="tl-desc">Contributed to e-commerce platform development and optimisation, collaborating with senior teams on process enhancement during a concurrent contract role.</p>
+        <ul class="tl-achievements">
+          <li>E-commerce platform development and performance optimisation</li>
+          <li>Process enhancement collaboration with senior development teams</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-inner">
+    <div class="section-eyebrow">Notable Projects</div>
+    <h2 class="section-title">Systems That Matter</h2>
+    <p class="section-sub">Projects at a scale where the stakes are real — government citizens, national infrastructure, international development goals, and real commercial outcomes.</p>
+    <div class="projects-grid">
+
+      <div class="proj-card reveal">
+        <span class="proj-badge badge-gov">🏛️ Government</span>
+        <div class="proj-title">VAARS — Nepal Telecom Recruitment System</div>
+        <p class="proj-desc">End-to-end vacancy management and recruitment platform for Nepal's national telecom. Secure payment processing, automated admission card generation, and large-scale user management.</p>
+        <div class="proj-impact"><div class="proj-impact-label">Measurable Impact</div><div class="proj-impact-text">Processed thousands of applications · Zero downtime · Letter of Appreciation from Nepal Telecom</div></div>
+        <div class="proj-tags"><span class="proj-tag">Laravel</span><span class="proj-tag">PHP</span><span class="proj-tag">MySQL</span><span class="proj-tag">Payment Gateway</span></div>
+      </div>
+
+      <div class="proj-card reveal">
+        <span class="proj-badge badge-gov">💰 Government Fintech</span>
+        <div class="proj-title">TaxPayer — Online Tax Payment System</div>
+        <p class="proj-desc">Integrated tax payment platform connecting multiple government revenue streams with Nepal's major Payment Service Providers. Automated reconciliation, secure transactions, multi-revenue collection.</p>
+        <div class="proj-impact"><div class="proj-impact-label">Measurable Impact</div><div class="proj-impact-text">Integrated with major Nepal PSPs · Streamlined multi-revenue tax collection · Automated reconciliation</div></div>
+        <div class="proj-tags"><span class="proj-tag">Laravel</span><span class="proj-tag">Payment APIs</span><span class="proj-tag">PostgreSQL</span><span class="proj-tag">Reconciliation</span></div>
+      </div>
+
+      <div class="proj-card reveal">
+        <span class="proj-badge badge-intl">🌍 World Bank</span>
+        <div class="proj-title">FANSEP 2 — Agricultural Cluster Platform</div>
+        <p class="proj-desc">World Bank–funded digital infrastructure for farmer cluster management, value chain enhancement, climate-resilient practice tracking, and market access. Built to international development standards.</p>
+        <div class="proj-impact"><div class="proj-impact-label">Measurable Impact</div><div class="proj-impact-text">World Bank-funded · International stakeholder coordination · Field-level digital adoption</div></div>
+        <div class="proj-tags"><span class="proj-tag">Laravel</span><span class="proj-tag">Vue.js</span><span class="proj-tag">World Bank Standards</span></div>
+      </div>
+
+      <div class="proj-card reveal">
+        <span class="proj-badge badge-intl">🏠 International Client</span>
+        <div class="proj-title">Real Estate Agent Management System</div>
+        <p class="proj-desc">Comprehensive property management platform for an Australian client — agent portfolios, property listings, client tracking, geolocation-based search, payment processing, automated notifications, and real-time analytics.</p>
+        <div class="proj-impact"><div class="proj-impact-label">Measurable Impact</div><div class="proj-impact-text">Australian market deployment · Real-time geolocation features · Full payment integration</div></div>
+        <div class="proj-tags"><span class="proj-tag">Laravel</span><span class="proj-tag">Vue.js</span><span class="proj-tag">Geolocation</span><span class="proj-tag">Analytics</span></div>
+      </div>
+
+      <div class="proj-card reveal">
+        <span class="proj-badge badge-sports">🏏 Sports Tech</span>
+        <div class="proj-title">Sudurpaschim Royals — Official Website</div>
+        <p class="proj-desc">Official franchise website for the Nepal Premier League team. Real-time match updates, interactive fan engagement, integrated ticketing, merchandise store, media gallery CMS, and match prediction features.</p>
+        <div class="proj-impact"><div class="proj-impact-label">Measurable Impact</div><div class="proj-impact-text">Nepal Premier League official presence · Fan engagement platform · E-commerce integration</div></div>
+        <div class="proj-tags"><span class="proj-tag">Laravel</span><span class="proj-tag">Real-time</span><span class="proj-tag">CMS</span><span class="proj-tag">E-commerce</span></div>
+      </div>
+
+      <div class="proj-card reveal">
+        <span class="proj-badge badge-social">🤝 Social Impact</span>
+        <div class="proj-title">Relief & Loan Management System</div>
+        <p class="proj-desc">Comprehensive tracking system for relief distribution and loan management. Beneficiary registration and verification, document management, automated notifications, detailed reporting dashboards, and loan application status tracking.</p>
+        <div class="proj-impact"><div class="proj-impact-label">Measurable Impact</div><div class="proj-impact-text">Community-level relief distribution · Digital beneficiary management · Audit-ready reporting</div></div>
+        <div class="proj-tags"><span class="proj-tag">Laravel</span><span class="proj-tag">Django</span><span class="proj-tag">Reporting</span><span class="proj-tag">Notifications</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-inner">
+    <div class="section-eyebrow">Technical Expertise</div>
+    <h2 class="section-title">The Full Stack, For Real</h2>
+    <p class="section-sub">Not a resume word cloud — an honest map of where I operate at senior level and where I contribute across the full delivery chain.</p>
+    <div class="skills-layout">
+      <div>
+        <div class="skill-group">
+          <div class="skill-group-title">Core Languages</div>
+          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-name">PHP</span><span class="skill-pct">95%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:95%"></div></div></div>
+          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-name">Python</span><span class="skill-pct">80%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:80%"></div></div></div>
+          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-name">JavaScript</span><span class="skill-pct">85%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%"></div></div></div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Backend Frameworks</div>
+          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-name">Laravel</span><span class="skill-pct">97%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:97%"></div></div></div>
+          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-name">Django</span><span class="skill-pct">78%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:78%"></div></div></div>
+          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-name">Odoo</span><span class="skill-pct">72%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:72%"></div></div></div>
+        </div>
+      </div>
+      <div>
+        <div class="skill-group">
+          <div class="skill-group-title">Frontend</div>
+          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-name">Vue.js</span><span class="skill-pct">85%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%"></div></div></div>
+          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-name">React.js</span><span class="skill-pct">78%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:78%"></div></div></div>
+          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-name">Tailwind CSS / Bootstrap</span><span class="skill-pct">90%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:90%"></div></div></div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Additional Skills</div>
+          <div class="skill-chips">
+            <span class="skill-chip">MySQL</span>
+            <span class="skill-chip">PostgreSQL</span>
+            <span class="skill-chip">Linux / Ubuntu</span>
+            <span class="skill-chip">Git / GitLab</span>
+            <span class="skill-chip">Bitbucket</span>
+            <span class="skill-chip">Power BI</span>
+            <span class="skill-chip">Power Query</span>
+            <span class="skill-chip">REST APIs</span>
+            <span class="skill-chip">Payment Gateways</span>
+            <span class="skill-chip">Agile / Scrum</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="section-inner">
+    <div class="section-eyebrow">By the Numbers</div>
+    <h2 class="section-title">Impact That's Measurable</h2>
+    <p class="section-sub">The numbers behind the work — because great code earns its place in production, not just in a repository.</p>
+    <div class="achieve-grid">
+      <div class="achieve-card reveal"><div class="achieve-icon">🗓️</div><div class="achieve-num">8+</div><div class="achieve-label">Years of professional full stack development</div></div>
+      <div class="achieve-card reveal"><div class="achieve-icon">👥</div><div class="achieve-num">1000s</div><div class="achieve-label">Users served by Nepal Telecom's VAARS system alone</div></div>
+      <div class="achieve-card reveal"><div class="achieve-icon">⏱️</div><div class="achieve-num">0</div><div class="achieve-label">Downtime incidents on government production systems</div></div>
+      <div class="achieve-card reveal"><div class="achieve-icon">🌍</div><div class="achieve-num">3+</div><div class="achieve-label">Countries and international clients served</div></div>
+      <div class="achieve-card reveal"><div class="achieve-icon">🏆</div><div class="achieve-num">1</div><div class="achieve-label">Formal recognition: Nepal Telecom Letter of Appreciation</div></div>
+      <div class="achieve-card reveal"><div class="achieve-icon">💼</div><div class="achieve-num">4+</div><div class="achieve-label">Concurrent senior roles managed simultaneously</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS & EDUCATION -->
+<section id="certed">
+  <div class="section-inner">
+    <div class="section-eyebrow">Credentials</div>
+    <h2 class="section-title">Education & Recognition</h2>
+    <p class="section-sub">The formal credentials behind the experience — and industry recognition that goes beyond a certificate.</p>
+    <div class="certed-grid">
+      <div class="cert-card reveal">
+        <div class="cert-icon-wrap">🎓</div>
+        <div>
+          <div class="cert-title">Bachelor of Engineering — Electronics & Communication</div>
+          <div class="cert-org">Purbanchal University, PUSET</div>
+          <div class="cert-note">Graduated 2013 · Strong engineering foundations in systems thinking and problem solving</div>
+        </div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-icon-wrap">🏅</div>
+        <div>
+          <div class="cert-title">Letter of Appreciation</div>
+          <div class="cert-org">Nepal Telecom</div>
+          <div class="cert-note">Awarded for outstanding performance and exceptional project management in VAARS — Nepal's national recruitment system</div>
+        </div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-icon-wrap">🌐</div>
+        <div>
+          <div class="cert-title">World Bank Project Consultant</div>
+          <div class="cert-org">FANSEP 2 / Dryice Solutions</div>
+          <div class="cert-note">Active international development consultant — FANSEP 2 agricultural cluster project, January 2025 to present</div>
+        </div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-icon-wrap">🗣️</div>
+        <div>
+          <div class="cert-title">Multilingual Professional</div>
+          <div class="cert-org">Language Skills</div>
+          <div class="cert-note">English: Professional Working Proficiency · Nepali: Native · Hindi: Conversational — ready for global teams</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-eyebrow">Let's Connect</div>
+    <h2 class="section-title">Ready for Your Next Hard Problem</h2>
+    <p class="section-sub">Whether you need a senior Laravel consultant, a full stack architect, or a technical lead for your enterprise project — let's talk.</p>
+    <div class="contact-grid">
+      <div>
+        <p class="contact-tagline">If you're hiring for <em>senior Laravel</em> or looking for a developer who ships <em>production-ready systems at scale</em> — I'm available.</p>
+        <p class="contact-note">Currently open to: Senior/Lead Laravel roles · Remote international contracts · Technical consulting engagements · Full-time positions with the right team.</p>
+        <div class="contact-buttons">
+          <a href="mailto:amitdev67@gmail.com" class="contact-btn contact-btn-email">
+            <div class="contact-btn-icon icon-email">✉️</div>
+            <div class="contact-btn-text"><span class="contact-btn-label">Email</span><span class="contact-btn-value">amitdev67@gmail.com</span></div>
+            <span>→</span>
+          </a>
+          <a href="https://wa.me/9779800908674" target="_blank" rel="noopener" class="contact-btn contact-btn-whatsapp">
+            <div class="contact-btn-icon icon-wa">💬</div>
+            <div class="contact-btn-text"><span class="contact-btn-label">WhatsApp</span><span class="contact-btn-value">+977 9800908674</span></div>
+            <span>→</span>
+          </a>
+          <a href="tel:+9779800908674" class="contact-btn contact-btn-call">
+            <div class="contact-btn-icon icon-phone">📞</div>
+            <div class="contact-btn-text"><span class="contact-btn-label">Phone / Call</span><span class="contact-btn-value">+977 9800908674</span></div>
+            <span>→</span>
+          </a>
+          <a href="https://www.linkedin.com/in/amitkumardev/" target="_blank" rel="noopener" class="contact-btn contact-btn-linkedin">
+            <div class="contact-btn-icon icon-li">🔗</div>
+            <div class="contact-btn-text"><span class="contact-btn-label">LinkedIn</span><span class="contact-btn-value">linkedin.com/in/amitkumardev</span></div>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+      <div class="dl-section reveal">
+        <div class="dl-title">📄 Download Full Resume</div>
+        <p class="dl-sub">Get the complete CV with all project details, technical stack depth, and references available upon request. Share directly with your hiring team.</p>
+        <a href="mailto:amitdev67@gmail.com?subject=Resume%20Request%20-%20Amit%20Kumar%20Dev&body=Hi%20Amit%2C%0A%0AI%20found%20your%20portfolio%20and%20would%20like%20to%20request%20your%20full%20resume.%0A%0AThank%20you!" class="dl-btn">
+          ⬇️ Request Full Resume by Email
+        </a>
+        <br><br>
+        <div style="background:#131419;border:1px solid #2D3142;border-radius:8px;padding:16px;margin-top:4px;">
+          <div style="font-size:0.78rem;color:#6B7280;margin-bottom:8px;font-family:'JetBrains Mono',monospace;">LOCATION</div>
+          <div style="font-size:0.88rem;color:#E5E7EB;">📍 Sanepa, Lalitpur, Kathmandu, Nepal</div>
+          <div style="font-size:0.82rem;color:#6B7280;margin-top:6px;">Available for remote work globally · Open to relocation for the right role</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Amit Kumar Dev · Full Stack Laravel Developer · Kathmandu, Nepal · <a href="mailto:amitdev67@gmail.com">amitdev67@gmail.com</a></p>
+</footer>
+
+<script>
+// Hamburger menu
+document.getElementById('hamburger').addEventListener('click', function() {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+
+// Scroll reveal
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+}, { threshold: 0.1 });
+revealEls.forEach(el => io.observe(el));
+
+// Animate skill bars on scroll
+const bars = document.querySelectorAll('.skill-bar-fill');
+const barObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting) {
+      const w = e.target.style.width;
+      e.target.style.width = '0%';
+      setTimeout(() => { e.target.style.width = w; }, 100);
+      barObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.3 });
+bars.forEach(b => barObserver.observe(b));
+</script>
+</body>
+</html>
